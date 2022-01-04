@@ -124,17 +124,34 @@ delete Product where ProductId = @ProductId
 			}
 		}
 
-		// Dapperの設定
 		public static List<ProductEntity> GetDapper()
 		{
-			// sqlの設定
 			var sql = @"select * from Product";
 			using (var connection = new SqlConnection(_connectionString))
 			{
-				// Dapperのクラスライブラリ「Query」を使用して
-				// "ProductEntity"の型のリストで返却するように指定
-				// 且つリストで返却したいため、return ～ .ToList(); として定義
 				return connection.Query<ProductEntity>(sql).ToList();
+			}
+		}
+
+		// DapperでのInsert処理
+		public static void DapperInsert(ProductEntity product)
+		{
+
+			// sql定義
+			string sql = @"
+				insert into Product(ProductId,ProductName,Price)
+				values(@ProductId,@ProductName,@Price)
+			";
+
+			using (var connection = new SqlConnection(_connectionString))
+			{
+				connection.Execute(sql,
+					new
+					{
+						ProductId = product.ProductId,
+						ProductName = product.ProductName,
+						Price = product.Price
+					});
 			}
 		}
 	}

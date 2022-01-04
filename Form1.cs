@@ -57,10 +57,20 @@ namespace Hoimi
 			ProductSqlServer.Delete(productId);
 		}
 
-		// Dapperの処理を定義
 		private void DapperReadButton_Click(object sender, EventArgs e)
 		{
 			dataGridView1.DataSource = ProductSqlServer.GetDapper();
+		}
+
+		// DapperでのInsert処理を定義
+		private void DapperInsertButton_Click(object sender, EventArgs e)
+		{
+			int productId = Convert.ToInt32(ProductIdTextBox.Text);
+			string productName = ProductNameTextBox.Text;
+			int price = Convert.ToInt32(PriceTextBox.Text);
+
+			var entity = new ProductEntity(productId, productName, price);
+			ProductSqlServer.DapperInsert(entity);
 		}
 	}
 }

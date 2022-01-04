@@ -151,7 +151,8 @@ delete Product where ProductId = @ProductId
 						ProductId = product.ProductId,
 						ProductName = product.ProductName,
 						Price = product.Price
-					});
+					}
+				);
 			}
 		}
 	}

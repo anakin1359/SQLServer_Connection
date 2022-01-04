@@ -56,7 +56,7 @@
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.RowHeadersWidth = 62;
 			this.dataGridView1.RowTemplate.Height = 27;
-			this.dataGridView1.Size = new System.Drawing.Size(553, 343);
+			this.dataGridView1.Size = new System.Drawing.Size(553, 472);
 			this.dataGridView1.TabIndex = 1;
 			// 
 			// ReaderreadButton
@@ -114,7 +114,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(843, 426);
+			this.ClientSize = new System.Drawing.Size(843, 555);
 			this.Controls.Add(this.UpdateCmdButton);
 			this.Controls.Add(this.InsertCmdButton);
 			this.Controls.Add(this.ProductNameTextBox);

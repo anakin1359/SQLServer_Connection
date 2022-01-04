@@ -100,7 +100,12 @@ update Product
 				command.Parameters.AddWithValue("@ProductId", product.ProductId);
 				command.Parameters.AddWithValue("@ProductName", product.ProductName);
 				command.Parameters.AddWithValue("@Price", product.Price);
-				command.ExecuteNonQuery();
+
+				var updateCount = command.ExecuteNonQuery();
+				if (updateCount < 1)
+				{
+					Insert(product);
+				}
 			}
 		}
 	}

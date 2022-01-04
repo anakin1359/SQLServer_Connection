@@ -20,3 +20,6 @@ C:\Users\takeu\Desktop\sn\practice\C#\udemy\DB\Hoimi\Hoimi\obj\Debug\Hoimi.cspro
 C:\Users\takeu\Desktop\sn\practice\C#\udemy\DB\Hoimi\Hoimi\obj\Debug\Hoimi.csproj.CoreCompileInputs.cache
 C:\Users\takeu\Desktop\sn\practice\C#\udemy\DB\Hoimi\Hoimi\obj\Debug\Hoimi.exe
 C:\Users\takeu\Desktop\sn\practice\C#\udemy\DB\Hoimi\Hoimi\obj\Debug\Hoimi.pdb
+C:\Users\takeu\Desktop\sn\practice\C#\udemy\DB\Hoimi\Hoimi\bin\Debug\Dapper.dll
+C:\Users\takeu\Desktop\sn\practice\C#\udemy\DB\Hoimi\Hoimi\bin\Debug\Dapper.xml
+C:\Users\takeu\Desktop\sn\practice\C#\udemy\DB\Hoimi\Hoimi\obj\Debug\Hoimi.csproj.CopyComplete

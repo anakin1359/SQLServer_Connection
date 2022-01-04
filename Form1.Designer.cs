@@ -37,6 +37,7 @@
 			this.InsertCmdButton = new System.Windows.Forms.Button();
 			this.UpdateCmdButton = new System.Windows.Forms.Button();
 			this.DeleteCmdButton = new System.Windows.Forms.Button();
+			this.DapperReadButton = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -121,11 +122,22 @@
 			this.DeleteCmdButton.UseVisualStyleBackColor = true;
 			this.DeleteCmdButton.Click += new System.EventHandler(this.DeleteCmdButton_Click);
 			// 
+			// DapperReadButton
+			// 
+			this.DapperReadButton.Location = new System.Drawing.Point(24, 349);
+			this.DapperReadButton.Name = "DapperReadButton";
+			this.DapperReadButton.Size = new System.Drawing.Size(172, 37);
+			this.DapperReadButton.TabIndex = 9;
+			this.DapperReadButton.Text = "Dapper read";
+			this.DapperReadButton.UseVisualStyleBackColor = true;
+			this.DapperReadButton.Click += new System.EventHandler(this.DapperReadButton_Click);
+			// 
 			// InsertCommandButton
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(843, 555);
+			this.Controls.Add(this.DapperReadButton);
 			this.Controls.Add(this.DeleteCmdButton);
 			this.Controls.Add(this.UpdateCmdButton);
 			this.Controls.Add(this.InsertCmdButton);
@@ -154,6 +166,7 @@
 		private System.Windows.Forms.Button InsertCmdButton;
 		private System.Windows.Forms.Button UpdateCmdButton;
 		private System.Windows.Forms.Button DeleteCmdButton;
+		private System.Windows.Forms.Button DapperReadButton;
 	}
 }
 

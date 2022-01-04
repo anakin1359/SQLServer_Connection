@@ -51,11 +51,16 @@ namespace Hoimi
 			ProductSqlServer.Update(entity);
 		}
 
-		// buttonイベントを定義
 		private void DeleteCmdButton_Click(object sender, EventArgs e)
 		{
 			int productId = Convert.ToInt32(ProductIdTextBox.Text);
 			ProductSqlServer.Delete(productId);
+		}
+
+		// Dapperの処理を定義
+		private void DapperReadButton_Click(object sender, EventArgs e)
+		{
+			dataGridView1.DataSource = ProductSqlServer.GetDapper();
 		}
 	}
 }

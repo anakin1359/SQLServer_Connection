@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dapper;
 
 namespace Hoimi.SqlServer
 {
@@ -109,9 +110,6 @@ update Product
 			}
 		}
 
-		// Deleteメソッドを定義
-		// 他クエリと異なり、Deleteの場合は主キーが判別できれば処理が可能
-		// Deleteメソッドの引数を「ProductEntity product」→「int productId」に変更
 		public static void Delete(int productId)
 		{
 			string sql = @"
@@ -121,10 +119,22 @@ delete Product where ProductId = @ProductId
 			using (var command = new SqlCommand(sql, connection))
 			{
 				connection.Open();
-
-				// 主キーの情報のみcommandメソッドに渡す
 				command.Parameters.AddWithValue("@ProductId", productId);
 				command.ExecuteNonQuery();
+			}
+		}
+
+		// Dapperの設定
+		public static List<ProductEntity> GetDapper()
+		{
+			// sqlの設定
+			var sql = @"select * from Product";
+			using (var connection = new SqlConnection(_connectionString))
+			{
+				// Dapperのクラスライブラリ「Query」を使用して
+				// "ProductEntity"の型のリストで返却するように指定
+				// 且つリストで返却したいため、return ～ .ToList(); として定義
+				return connection.Query<ProductEntity>(sql).ToList();
 			}
 		}
 	}

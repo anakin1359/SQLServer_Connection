@@ -50,5 +50,12 @@ namespace Hoimi
 			var entity = new ProductEntity(productId, productName, price);
 			ProductSqlServer.Update(entity);
 		}
+
+		// buttonイベントを定義
+		private void DeleteCmdButton_Click(object sender, EventArgs e)
+		{
+			int productId = Convert.ToInt32(ProductIdTextBox.Text);
+			ProductSqlServer.Delete(productId);
+		}
 	}
 }

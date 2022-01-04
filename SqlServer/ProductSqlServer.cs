@@ -108,5 +108,24 @@ update Product
 				}
 			}
 		}
+
+		// Deleteメソッドを定義
+		// 他クエリと異なり、Deleteの場合は主キーが判別できれば処理が可能
+		// Deleteメソッドの引数を「ProductEntity product」→「int productId」に変更
+		public static void Delete(int productId)
+		{
+			string sql = @"
+delete Product where ProductId = @ProductId
+";
+			using (var connection = new SqlConnection(_connectionString))
+			using (var command = new SqlCommand(sql, connection))
+			{
+				connection.Open();
+
+				// 主キーの情報のみcommandメソッドに渡す
+				command.Parameters.AddWithValue("@ProductId", productId);
+				command.ExecuteNonQuery();
+			}
+		}
 	}
 }

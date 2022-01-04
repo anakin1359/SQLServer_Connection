@@ -36,6 +36,7 @@
 			this.ProductNameTextBox = new System.Windows.Forms.TextBox();
 			this.InsertCmdButton = new System.Windows.Forms.Button();
 			this.UpdateCmdButton = new System.Windows.Forms.Button();
+			this.DeleteCmdButton = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -110,11 +111,22 @@
 			this.UpdateCmdButton.UseVisualStyleBackColor = true;
 			this.UpdateCmdButton.Click += new System.EventHandler(this.UpdateCmdButton_Click);
 			// 
+			// DeleteCmdButton
+			// 
+			this.DeleteCmdButton.Location = new System.Drawing.Point(24, 284);
+			this.DeleteCmdButton.Name = "DeleteCmdButton";
+			this.DeleteCmdButton.Size = new System.Drawing.Size(172, 37);
+			this.DeleteCmdButton.TabIndex = 8;
+			this.DeleteCmdButton.Text = "Delete cmd";
+			this.DeleteCmdButton.UseVisualStyleBackColor = true;
+			this.DeleteCmdButton.Click += new System.EventHandler(this.DeleteCmdButton_Click);
+			// 
 			// InsertCommandButton
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(843, 555);
+			this.Controls.Add(this.DeleteCmdButton);
 			this.Controls.Add(this.UpdateCmdButton);
 			this.Controls.Add(this.InsertCmdButton);
 			this.Controls.Add(this.ProductNameTextBox);
@@ -141,6 +153,7 @@
 		private System.Windows.Forms.TextBox ProductNameTextBox;
 		private System.Windows.Forms.Button InsertCmdButton;
 		private System.Windows.Forms.Button UpdateCmdButton;
+		private System.Windows.Forms.Button DeleteCmdButton;
 	}
 }
 

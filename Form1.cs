@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hoimi.Models;
 using Hoimi.SqlServer;
 
 namespace Hoimi
@@ -71,6 +72,33 @@ namespace Hoimi
 
 			var entity = new ProductEntity(productId, productName, price);
 			ProductSqlServer.DapperInsert(entity);
+		}
+
+		// EntityFramework でのデータ取得処理
+		private void EFReadButton_Click(object sender, EventArgs e)
+		{
+			var source = new List<Product>();
+			using (var db = new HoimiDbContext())
+			{
+				source.AddRange(db.Products);
+			}
+
+			dataGridView1.DataSource = source;
+		}
+
+		// EntityFramework Insert処理
+		private void EFInsertButton_Click(object sender, EventArgs e)
+		{
+			Product p = new Product();
+			p.ProductId = Convert.ToInt32(ProductIdTextBox.Text);
+			p.ProductName = ProductNameTextBox.Text;
+			p.Price = Convert.ToInt32(PriceTextBox.Text);
+
+			using (var db = new HoimiDbContext())
+			{
+				db.Products.Add(p);
+				db.SaveChanges();
+			}
 		}
 	}
 }

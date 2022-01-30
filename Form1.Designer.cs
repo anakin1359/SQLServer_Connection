@@ -39,6 +39,8 @@
 			this.DeleteCmdButton = new System.Windows.Forms.Button();
 			this.DapperReadButton = new System.Windows.Forms.Button();
 			this.DapperInsertButton = new System.Windows.Forms.Button();
+			this.EFReadButton = new System.Windows.Forms.Button();
+			this.EFInsertButton = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -143,11 +145,33 @@
 			this.DapperInsertButton.UseVisualStyleBackColor = true;
 			this.DapperInsertButton.Click += new System.EventHandler(this.DapperInsertButton_Click);
 			// 
+			// EFReadButton
+			// 
+			this.EFReadButton.Location = new System.Drawing.Point(24, 384);
+			this.EFReadButton.Name = "EFReadButton";
+			this.EFReadButton.Size = new System.Drawing.Size(172, 37);
+			this.EFReadButton.TabIndex = 11;
+			this.EFReadButton.Text = "EF read";
+			this.EFReadButton.UseVisualStyleBackColor = true;
+			this.EFReadButton.Click += new System.EventHandler(this.EFReadButton_Click);
+			// 
+			// EFInsertButton
+			// 
+			this.EFInsertButton.Location = new System.Drawing.Point(24, 427);
+			this.EFInsertButton.Name = "EFInsertButton";
+			this.EFInsertButton.Size = new System.Drawing.Size(172, 37);
+			this.EFInsertButton.TabIndex = 12;
+			this.EFInsertButton.Text = "EF insert";
+			this.EFInsertButton.UseVisualStyleBackColor = true;
+			this.EFInsertButton.Click += new System.EventHandler(this.EFInsertButton_Click);
+			// 
 			// InsertCommandButton
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(843, 555);
+			this.Controls.Add(this.EFInsertButton);
+			this.Controls.Add(this.EFReadButton);
 			this.Controls.Add(this.DapperInsertButton);
 			this.Controls.Add(this.DapperReadButton);
 			this.Controls.Add(this.DeleteCmdButton);
@@ -180,6 +204,8 @@
 		private System.Windows.Forms.Button DeleteCmdButton;
 		private System.Windows.Forms.Button DapperReadButton;
 		private System.Windows.Forms.Button DapperInsertButton;
+		private System.Windows.Forms.Button EFReadButton;
+		private System.Windows.Forms.Button EFInsertButton;
 	}
 }
 

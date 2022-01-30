@@ -23,3 +23,7 @@ C:\Users\takeu\Desktop\sn\practice\C#\udemy\DB\Hoimi\Hoimi\obj\Debug\Hoimi.pdb
 C:\Users\takeu\Desktop\sn\practice\C#\udemy\DB\Hoimi\Hoimi\bin\Debug\Dapper.dll
 C:\Users\takeu\Desktop\sn\practice\C#\udemy\DB\Hoimi\Hoimi\bin\Debug\Dapper.xml
 C:\Users\takeu\Desktop\sn\practice\C#\udemy\DB\Hoimi\Hoimi\obj\Debug\Hoimi.csproj.CopyComplete
+C:\Users\takeu\Desktop\sn\practice\C#\udemy\DB\Hoimi\Hoimi\bin\Debug\EntityFramework.dll
+C:\Users\takeu\Desktop\sn\practice\C#\udemy\DB\Hoimi\Hoimi\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\takeu\Desktop\sn\practice\C#\udemy\DB\Hoimi\Hoimi\bin\Debug\EntityFramework.xml
+C:\Users\takeu\Desktop\sn\practice\C#\udemy\DB\Hoimi\Hoimi\bin\Debug\EntityFramework.SqlServer.xml

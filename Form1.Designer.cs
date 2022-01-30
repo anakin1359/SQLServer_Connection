@@ -42,6 +42,7 @@
 			this.EFReadButton = new System.Windows.Forms.Button();
 			this.EFInsertButton = new System.Windows.Forms.Button();
 			this.EFUpdateButton = new System.Windows.Forms.Button();
+			this.EFDeleteButton = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -176,11 +177,23 @@
 			this.EFUpdateButton.UseVisualStyleBackColor = true;
 			this.EFUpdateButton.Click += new System.EventHandler(this.EFUpdateButton_Click);
 			// 
+			// EFDeleteButton
+			// 
+			this.EFDeleteButton.Location = new System.Drawing.Point(24, 513);
+			this.EFDeleteButton.Name = "EFDeleteButton";
+			this.EFDeleteButton.Size = new System.Drawing.Size(172, 37);
+			this.EFDeleteButton.TabIndex = 14;
+			this.EFDeleteButton.TabStop = false;
+			this.EFDeleteButton.Text = "EF delete";
+			this.EFDeleteButton.UseVisualStyleBackColor = true;
+			this.EFDeleteButton.Click += new System.EventHandler(this.EFDeleteButton_Click);
+			// 
 			// InsertCommandButton
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(843, 555);
+			this.Controls.Add(this.EFDeleteButton);
 			this.Controls.Add(this.EFUpdateButton);
 			this.Controls.Add(this.EFInsertButton);
 			this.Controls.Add(this.EFReadButton);
@@ -219,6 +232,7 @@
 		private System.Windows.Forms.Button EFReadButton;
 		private System.Windows.Forms.Button EFInsertButton;
 		private System.Windows.Forms.Button EFUpdateButton;
+		private System.Windows.Forms.Button EFDeleteButton;
 	}
 }
 

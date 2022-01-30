@@ -113,5 +113,17 @@ namespace Hoimi
 				db.SaveChanges();
 			}
 		}
+
+		// EntityFramework Delete処理
+		private void EFDeleteButton_Click(object sender, EventArgs e)
+		{
+			using (var db = new HoimiDbContext())
+			{
+				var p = db.Products.Find(
+					Convert.ToInt32(ProductIdTextBox.Text));
+				db.Products.Remove(p);
+				db.SaveChanges();
+			}
+		}
 	}
 }

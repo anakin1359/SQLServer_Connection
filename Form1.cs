@@ -100,5 +100,18 @@ namespace Hoimi
 				db.SaveChanges();
 			}
 		}
+
+		// EntityFramework Update処理
+		private void EFUpdateButton_Click(object sender, EventArgs e)
+		{
+			using(var db = new HoimiDbContext())
+			{
+				var p = db.Products.Find(
+					Convert.ToInt32(ProductIdTextBox.Text));
+				p.ProductName = ProductNameTextBox.Text;
+				p.Price = Convert.ToInt32(PriceTextBox.Text);
+				db.SaveChanges();
+			}
+		}
 	}
 }

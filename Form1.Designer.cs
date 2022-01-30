@@ -41,6 +41,7 @@
 			this.DapperInsertButton = new System.Windows.Forms.Button();
 			this.EFReadButton = new System.Windows.Forms.Button();
 			this.EFInsertButton = new System.Windows.Forms.Button();
+			this.EFUpdateButton = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -165,11 +166,22 @@
 			this.EFInsertButton.UseVisualStyleBackColor = true;
 			this.EFInsertButton.Click += new System.EventHandler(this.EFInsertButton_Click);
 			// 
+			// EFUpdateButton
+			// 
+			this.EFUpdateButton.Location = new System.Drawing.Point(24, 470);
+			this.EFUpdateButton.Name = "EFUpdateButton";
+			this.EFUpdateButton.Size = new System.Drawing.Size(172, 37);
+			this.EFUpdateButton.TabIndex = 13;
+			this.EFUpdateButton.Text = "EF update";
+			this.EFUpdateButton.UseVisualStyleBackColor = true;
+			this.EFUpdateButton.Click += new System.EventHandler(this.EFUpdateButton_Click);
+			// 
 			// InsertCommandButton
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(843, 555);
+			this.Controls.Add(this.EFUpdateButton);
 			this.Controls.Add(this.EFInsertButton);
 			this.Controls.Add(this.EFReadButton);
 			this.Controls.Add(this.DapperInsertButton);
@@ -206,6 +218,7 @@
 		private System.Windows.Forms.Button DapperInsertButton;
 		private System.Windows.Forms.Button EFReadButton;
 		private System.Windows.Forms.Button EFInsertButton;
+		private System.Windows.Forms.Button EFUpdateButton;
 	}
 }
 
